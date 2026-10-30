@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator| Build Better Websites</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-white ">
+
+    <!-- Navbar -->
+
+    <header class="relative rounded-lg border-b border-gray-200 ">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <img src="Assest/image/Group 482899.png" alt="Logo" class="h-8 w-8">
+
+                <span class="text-xl font-bold">Calculator Online.</span>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="hidden items-center gap-8 md:flex">
+                <a href="#home" class="text-sm text-gray-700">Home</a>
+                <a href="#ai chat" class="text-sm text-gray-700">Ai chat </a>
+                <a href="#tool" class="text-sm text-gray-700">Tools</a>
+                <a href="#category" class="text-sm text-gray-700">category</a>
+                <a href="#about" class="text-sm text-gray-700">Pricing</a>
+
+            </div>
+
+            <!-- Contact Button: Desktop Only -->
+            <a href="#contact"
+                class="hidden rounded-lg border border-gray-100 bg-blue-500 px-5 py-3 text-sm font-semibold text-white  md:inline-block hover:bg-blue-700">
+                Sign In
+            </a>
+
+
+            <!-- Mobile Menu Button -->
+            <button id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false"
+                class="rounded-lg border border-blue-300 p-2 text-blue-500 md:hidden">
+
+                <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+
+
+        <!-- slide bar -->
+        <div id="mobileMenu"
+            class="fixed left-0 top-0 z-50 h-full w-72 max-w-[85vw] -translate-x-full bg-blue-50 p-6 shadow-2xl transition-transform duration-300 ease-in-out md:hidden">
+
+            <div class="flex items-center justify-between border-b border-blue-200 pb-5">
+                <a href="#home" class="text-xl font-bold">
+                    Calculator<span class="text-blue-600"> Online.</span>
+                </a>
+
+                <button id="closeMenu" type="button" aria-label="Close menu"
+                    class="rounded-lg p-2 text-2xl text-blue-700 hover:bg-blue-100">
+                    &times;
+                </button>
+            </div>
+
+            <!--  Links -->
+            <div class="mt-8 flex flex-col gap-2">
+                <a href="#home"
+                    class="menuLink rounded-lg px-4 py-3 text-gray-700 hover:bg-blue-100 hover:text-blue-700">
+                    Home
+                </a>
+
+                <a href="#" class="menuLink rounded-lg px-4 py-3 text-gray-700 hover:bg-blue-100 hover:text-blue-700">
+                    Ai chat
+                </a>
+
+                <a href="#" class="menuLink rounded-lg px-4 py-3 text-gray-700 hover:bg-blue-100 hover:text-blue-700">
+                    Tools
+                </a>
+
+                <a href="#" class="menuLink rounded-lg px-4 py-3 text-gray-700 hover:bg-blue-100 hover:text-blue-700">
+                    Category
+                </a>
+
+                <a href="#" class="menuLink rounded-lg px-4 py-3 text-gray-700 hover:bg-blue-100 hover:text-blue-700">
+                    pricing
+                </a>
+
+                <a href="#"
+                    class="menuLink mt-4 rounded-lg bg-blue-700 px-5 py-3 text-center font-semibold text-white hover:bg-blue-500">
+                    Sign In
+                </a>
+            </div>
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- Hero Section -->
+
+    <main class="mx-auto flex flex-col max-w-7xl items-center gap-5 px-6 py-20  md:py-8">
+
+        <!-- Left Content -->
+        <div>
+
+
+            <h1 class="mt-6 text-4xl font-bold sm:text-4xl lg:text-5xl text-center ">
+                Calculator Online
+            </h1>
+
+            <p class="mt-4 max-w-lg text-sm font-semibold text-center  ">
+                This business card scanner quickly scans and reads physical business card details
+                and converts into vcard (.vcf), csv or excel format for digitizing contact.
+            </p>
+
+
+        </div>
+
+        <!-- Right Dashboard Preview -->
+
+        <div class="w-full  bg-white p-2 sm:p-4">
+
+            <div class="w-full border border-gray-200 rounded-lg p-3 sm:p-4 shadow-lg shadow-blue-">
+
+                <!-- Input + Solve -->
+                <div class="grid grid-cols-[1fr_110px] gap-3 mb-3">
+                    <input type="text" placeholder="Type Your Question"
+                        class="w-full min-w-0 rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm">
+
+                    <button class="rounded-md bg-blue-600 text-white font-semibold">
+                        Solve
+                    </button>
+                </div>
+
+                <!-- Calculator Buttons -->
+                <div class="grid grid-cols-7 gap-3">
+
+                    <button class="col-span-2 rounded-md border border-gray-100 py-2">◯ Degree</button>
+                    <button class="col-span-2 rounded-md border border-gray-100 py-2">◯ Radian</button>
+                    <button class="rounded-md bg-gray-50 py-2">7</button>
+                    <button class="rounded-md bg-gray-50 py-2">8</button>
+                    <button class="rounded-md bg-gray-50 py-2">9</button>
+
+                    <button class="rounded-md bg-blue-50 py-2">sin</button>
+                    <button class="rounded-md bg-blue-50 py-2">cos</button>
+                    <button class="rounded-md bg-blue-50 py-2">tan</button>
+                    <button class="rounded-md bg-gray-50 py-2">4</button>
+                    <button class="rounded-md bg-gray-50 py-2">5</button>
+                    <button class="rounded-md bg-gray-50 py-2">6</button>
+                    <button class="row-span-2 rounded-md bg-blue-50 font-bold">=</button>
+
+                    <button class="rounded-md bg-blue-50 py-2">sin-1</button>
+                    <button class="rounded-md bg-blue-50 py-2">cos-1</button>
+                    <button class="rounded-md bg-blue-50 py-2">tan-1</button>
+                    <button class="rounded-md bg-gray-50 py-2">1</button>
+                    <button class="rounded-md bg-gray-50 py-2">2</button>
+                    <button class="rounded-md bg-gray-50 py-2">3</button>
+
+                    <button class="rounded-md bg-blue-50 py-2">Xy</button>
+                    <button class="rounded-md bg-blue-50 py-2">x3</button>
+                    <button class="rounded-md bg-blue-50 py-2">x2</button>
+                    <button class="rounded-md bg-blue-600 text-white py-2">AC</button>
+                    <button class="rounded-md bg-gray-50 py-2">EXP</button>
+                    <button class="rounded-md bg-gray-50 py-2">RND</button>
+                    <button class="rounded-md bg-blue-50 py-2">+</button>
+
+                    <button class="rounded-md bg-blue-50 py-2">y√x</button>
+                    <button class="rounded-md bg-blue-50 py-2">3√x</button>
+                    <button class="rounded-md bg-blue-50 py-2">√x</button>
+                    <button class="rounded-md bg-blue-50 py-2">+-</button>
+                    <button class="rounded-md bg-blue-50 py-2">±</button>
+                    <button class="rounded-md bg-blue-50 py-2">MR</button>
+                    <button class="rounded-md bg-blue-50 py-2">×</button>
+
+                    <button class="rounded-md bg-blue-50 py-2">TT</button>
+                    <button class="rounded-md bg-blue-50 py-2">e</button>
+                    <button class="rounded-md bg-blue-50 py-2">ex</button>
+                    <button class="rounded-md bg-blue-50 py-2">%</button>
+                    <button class="rounded-md bg-blue-50 py-2">M+</button>
+                    <button class="rounded-md bg-blue-50 py-2">M-</button>
+                    <button class="rounded-md bg-blue-50 py-2">/</button>
+
+                    <button class="rounded-md bg-blue-50 py-2">10x</button>
+                    <button class="rounded-md bg-blue-50 py-2">ln</button>
+                    <button class="rounded-md bg-blue-50 py-2">log</button>
+                    <button class="rounded-md bg-blue-50 py-2">(</button>
+                    <button class="rounded-md bg-blue-50 py-2">)</button>
+                    <button class="rounded-md bg-blue-50 py-2">1/x</button>
+                    <button class="rounded-md bg-blue-50 py-2">n!</button>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- calculator types -->
+
+
+    <section id="features" class="bg-white px-6 py-20 md:py-8">
+
+        <div class="mx-auto max-w-7xl ">
+
+            <!-- Section Heading -->
+            <div class="mx-auto max-w-2xl text-center">
+
+
+
+                <h2
+                    class="mt-4 flex items-center justify-center gap-2 whitespace-nowrap text-sm font-bold sm:text-2xl md:text-2xl lg:text-3xl">
+                    <img src="Assest/image/stars (3) 1.png" class=" h-6 w-6">
+                    Explore More Than
+                    <span class="text-blue-500">1,000 Calculators</span>
+                </h2>
+
+                <p class="mt-3 text-sm  ">
+                    This business card scanner quickly scans and reads physical business card details and converts into
+                </p>
+
+            </div>
+
+
+            <!-- cards -->
+            <div
+                class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-3 p-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-4 md:gap-5">
+
+                <!-- Card 1 -->
+
+                <div class="flex h-[53px] w-full items-center gap-3 rounded-sm bg-blue-600 px-4 text-white">
+
+
+                    <span class="text-2xl leading-none"><img src="Assest/image/Frame 102.png"></span>
+
+
+                    <span class="text-base ">AI Tools</span>
+
+                </div>
+
+                <!-- card 2 -->
+                <div
+                    class="flex h-[53px] w-full items-center gap-3 rounded-sm border border-gray-200 bg-white px-4 text-black">
+
+
+                    <span class="text-2xl leading-none"> <img
+                            src="Assest/image/healthcare-covid19-coronavirus-hand-hearth.png"></span>
+
+
+                    <span class="text-base ">Math Calc</span>
+
+                </div>
+
+
+
+                <!-- card 3 -->
+                <div
+                    class="flex h-[53px] w-full items-center gap-3 rounded-sm border border-gray-200 bg-white px-4 text-black">
+
+
+                    <span class="text-2xl leading-none"> <img src="Assest/image/Frame 93.png"></span>
+
+
+                    <span class="text-base ">Life Calc</span>
+
+                </div>
+
+
+
+                <!-- card 4 -->
+                <div
+                    class="flex h-[53px] w-full items-center gap-3 rounded-sm border border-gray-200 bg-white px-4 text-black">
+
+
+                    <span class="text-2xl leading-none"> <img
+                            src="Assest/image/healthcare-covid19-coronavirus-hand-hearth (1).png"></span>
+
+
+                    <span class="text-base ">Health Calc</span>
+
+                </div>
+
+
+                <!-- card 5-->
+                <div
+                    class="flex h-[53px] w-full items-center gap-3 rounded-sm border border-gray-200 bg-white px-4 text-black">
+
+
+                    <span class="text-2xl leading-none"> <img src="Assest/image/Frame 95.png"></span>
+
+
+                    <span class="text-base ">Physics Calc</span>
+
+                </div>
+
+
+
+                <!-- card 6 -->
+                <div
+                    class="flex h-[53px] w-full items-center gap-3 rounded-sm border border-gray-200 bg-white px-4 text-black">
+
+
+                    <span class="text-2xl leading-none"> <img src="Assest/image/Frame 96.png"></span>
+
+                    <span class="text-base ">Chemistry Calc</span>
+
+                </div>
+
+
+                <!-- card 7 -->
+                <div
+                    class="flex h-[53px] w-full items-center gap-3 rounded-sm border border-gray-200 bg-white px-4 text-black">
+
+                    <span class="text-2xl leading-none"> <img src="Assest/image/Frame 97.png"></span>
+                    <span class="text-base ">Statistics Calc</span>
+
+                </div>
+
+
+
+                <!-- card 8 -->
+                <div
+                    class="flex h-[53px] w-full items-center gap-3 rounded-sm border border-gray-200 bg-white px-4 text-black">
+
+                    <span class="text-2xl leading-none"> <img src="Assest/image/Frame 94.png"></span>
+                    <span class="text-base ">Finance Calc</span>
+
+                </div>
+
+
+
+                <!-- card 9 -->
+                <div
+                    class="flex h-[53px] w-full items-center gap-3 rounded-sm border border-gray-200 bg-white px-4 text-black">
+                    <span class="text-2xl leading-none"> <img src="Assest/image/Frame 99.png"></span>
+                    <span class="text-base ">Pets Calc</span>
+
+                </div>
+
+
+
+                <!-- card 10 -->
+                <div
+                    class="flex h-[53px] w-full items-center gap-3 rounded-sm border border-gray-200 bg-white px-4 text-black">
+
+                    <!-- Sparkle Icon -->
+                    <span class="text-2xl leading-none"> <img src="Assest/image/Frame 100.png"></span>
+
+                    <!-- Text -->
+                    <span class="text-base ">Time & Date Calc</span>
+
+                </div>
+
+
+
+                <!-- card 11 -->
+                <div
+                    class="flex h-[53px] w-full items-center gap-3 rounded-sm border border-gray-200 bg-white px-4 text-black">
+
+                    <!-- Sparkle Icon -->
+                    <span class="text-2xl leading-none"> <img src="Assest/image/Frame 101.png"></span>
+
+                    <!-- Text -->
+                    <span class="text-base ">Conversion</span>
+
+                </div>
+
+
+
+                <!-- card 12 -->
+                <div
+                    class="flex h-[53px] w-full items-center gap-3 rounded-sm border border-gray-200 bg-white px-4 text-black">
+
+                    <!-- Sparkle Icon -->
+                    <span class="text-2xl leading-none"> <img src="Assest/image/Frame 98.png"></span>
+
+                    <!-- Text -->
+                    <span class="text-base ">Construction Calc</span>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!--Aabout calculator -->
+    <section id="about" class="bg-gray-50 px-6 py-20 md:py-8">
+
+        <div class="mx-auto grid w-full max-w-7xl items-center gap-8 px-4 sm:px-6 md:grid-cols-2 md:gap-12 lg:px-8">
+
+            <!-- Left Content -->
+            <div>
+
+
+                <h2 class="mt-4 text-3xl font-bold leading-tight  sm:text-4xl lg:text-3xl">
+                    About Calculator
+                    <span class="text-blue-700">Online.</span>
+                </h2>
+
+                <p class="mt-6 leading-5  text-base ">
+                    Calculator-online.net is your ultimate destination for a wide range of free online calculators.
+                    These tools include AI tools, health, finance, statistics, maths, physics, and chemistry. Everyone
+                    deserves instant and free access to reliable calculations. Our mission is to provide accurate and
+                    up-to-date results to tackle challenges with precision.
+                </p>
+                <P class="mt-6 leading-5 text-base ">
+                    Why does Calculator Online strive to be a one-stop destination? The team of online calculators
+                    continues to update, and new tools are being added regularly. Whether you are tackling basic maths
+                    problems or delving into more complex equations, this platform is designed to streamline your
+                    mathematical endeavours.
+                </P>
+                <P class="mt-6 leading-5 text-base ">
+                    Every tool developed by the Calculator Online is designed for accurate results, showing our strong
+                    commitment to your satisfaction. If you feel any inconvenience regarding these online calculators,
+                    feel free to Contact Us. Increase your mathematical productivity with the Calculator Online, your
+                    best companion in mathematics.
+                </p>
+
+            </div>
+
+            <!-- right content -->
+            <div class="relative">
+
+                <img src="Assest/image/Layer 2.png">
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Ai tools -->
+    <section id="" class="bg-white px-6 py-20 md:py-8">
+
+
+        <div class="mx-auto max-w-7xl ">
+
+            <!-- Section Heading -->
+            <div class="mx-auto max-w-2xl text-center">
+
+
+
+                <h2 class="mt-4  text-center gap-2  text-xl font-bold   sm:text-2xl lg:text-3xl">
+
+                    AI Tools
+                    <span class="text-blue-500"> Calculators</span>
+                </h2>
+
+                <p class="mt-3 text-sm">
+                    This business card scanner quickly scans and reads physical business card details and converts into
+                </p>
+
+            </div>
+
+            <!-- Ai cards -->
+            <div class="grid grid-cols-2 gap-3 p-4 max-w-6xl mx-auto sm:grid-cols-2 md:grid-cols-4 md:gap-4">
+
+                <!-- Card 1: AI Math Solver -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/Group1.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">AI Math Solver</span>
+                </div>
+
+                <!-- Card 2-->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_8976694.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">AI Translator</span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200 ">
+                    <img src="Assest/image/fi_17388665.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Question AI</span>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="flex items-center justify-center p-6 bg-white rounded-lg border-2 border-blue-500  ">
+                    <span class="text-gray-800 text-sm font-medium text-center">See More</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- health calculator -->
+    <section id="" class="bg-white px-6 py-20 md:py-8">
+
+        <div class="mx-auto max-w-7xl ">
+            <!-- section heading-->
+            <div class="mx-auto max-w-2xl text-center">
+
+                <h2 class="mt-4  text-center gap-2  text-xl font-bold   sm:text-2xl lg:text-3xl">
+
+                    Health
+                    <span class="text-blue-500"> Calculators</span>
+                </h2>
+
+                <p class="mt-3 text-sm">
+                    This business card scanner quickly scans and reads physical business card details and converts into
+                </p>
+
+            </div>
+
+
+            <!-- Health cards -->
+
+            <div class="grid grid-cols-2 gap-3 p-4 max-w-6xl mx-auto sm:grid-cols-2 md:grid-cols-4 md:gap-4">
+
+                <!-- Card 1 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_6848762.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">BMI Calculator</span>
+                </div>
+
+                <!-- Card 2-->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_7077960.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Ovulation Calculator</span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200 ">
+                    <img src="Assest/image/fi_4320572.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Pregnancy Calculator</span>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200 ">
+                    <img src="Assest/image/fi_16416719.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Weight Loss Calculator</span>
+                </div>
+
+
+                <!-- Card 5 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200 ">
+                    <img src="Assest/image/fi_6265854.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">TDEE Calculator</span>
+                </div>
+
+
+                <!-- Card 6 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200 ">
+                    <img src="Assest/image/fi_4257331.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Macro Calculator</span>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200 ">
+                    <img src="Assest/image/fi_4383076.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center"> RMR Calculator</span>
+                </div>
+
+
+                <!-- Card 8 -->
+                <div class="flex items-center justify-center p-6 bg-white rounded-lg border-2 border-blue-500  ">
+                    <span class="text-gray-800 text-sm font-medium text-center">See More</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- finance calculator -->
+
+    <section id="" class="bg-white px-6 py-20 md:py-8">
+
+        <div class="mx-auto max-w-7xl ">
+
+            <!-- section heading-->
+            <div class="mx-auto max-w-2xl text-center">
+
+                <h2 class="mt-4  text-center gap-2  text-xl font-bold   sm:text-2xl lg:text-3xl">
+
+                    Finance
+                    <span class="text-blue-500"> Calculators</span>
+                </h2>
+
+                <p class="mt-3 text-sm">
+                    This business card scanner quickly scans and reads physical business card details and converts into
+                </p>
+
+            </div>
+
+            <!-- finance cards  -->
+
+            <div class="grid grid-cols-2 gap-3 p-4 max-w-6xl mx-auto sm:grid-cols-2 md:grid-cols-4 md:gap-4">
+
+                <!-- Card 1 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_12618016.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Income Tax Calculator</span>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_15885451.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Stamp Duty Calculator</span>
+                </div>
+
+
+                <!-- Card 3 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_14177869.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">VAT Calculator</span>
+                </div>
+
+
+
+                <!-- Card 4 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_1570998.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Salary Calculator</span>
+                </div>
+
+
+
+                <!-- Card 5 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_18546464.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Sales Tax Calculator</span>
+                </div>
+
+
+
+                <!-- Card 6 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_3936804.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Discount Calculator</span>
+                </div>
+
+
+                <!-- Card 7 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_14593971.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">FIFO & LIFO Calculator</span>
+                </div>
+
+
+                <!-- Card 8 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_18419992.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Price Elasticity of Demand</span>
+                </div>
+
+
+                <!-- Card 9 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_2243160.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Margin Calculator</span>
+                </div>
+
+
+                <!-- Card 10 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/Layer_x0020_1.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Enterprise Value Calculator</span>
+                </div>
+
+
+                <!-- Card 11 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_4383076.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">EBITDA Calculator</span>
+                </div>
+
+
+                <!-- card 12 -->
+                <div class="flex items-center justify-center p-6 bg-white rounded-lg border-2 border-blue-500  ">
+                    <span class="text-gray-800 text-sm font-medium text-center">See More</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- Math calculator -->
+    <section id="" class="bg-white px-6 py-20 md:py-8">
+
+
+        <div class="mx-auto max-w-7xl ">
+
+            <!-- section heading-->
+            <div class="mx-auto max-w-2xl text-center">
+
+                <h2 class="mt-4  text-center gap-2  text-xl font-bold   sm:text-2xl lg:text-3xl">
+
+                    Math
+                    <span class="text-blue-500"> Calculators</span>
+                </h2>
+
+                <p class="mt-3 text-sm">
+                    This business card scanner quickly scans and reads physical business card details and converts into
+                </p>
+
+            </div>
+            <!-- MAth card -->
+
+            <div class="grid grid-cols-2 gap-3 p-4 max-w-6xl mx-auto sm:grid-cols-2 md:grid-cols-4 md:gap-4">
+
+                <!-- Card 1 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/Group2.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">BMI Calculator</span>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/Icons.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">BMI Calculator</span>
+                </div>
+
+
+                <!-- Card 3 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/Group (1).png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">BMI Calculator</span>
+                </div>
+
+
+                <!-- Card 4 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_1739515.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">BMI Calculator</span>
+                </div>
+
+
+
+                <!-- Card 5 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_3936804.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">BMI Calculator</span>
+                </div>
+
+
+                <!-- Card 6 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_11689978.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">BMI Calculator</span>
+                </div>
+
+
+
+                <!-- Card 7 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_2812423.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">BMI Calculator</span>
+                </div>
+
+                <!-- card 8 -->
+                <div class="flex items-center justify-center p-6 bg-white rounded-lg border-2 border-blue-500  ">
+                    <span class="text-gray-800 text-sm font-medium text-center">See More</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- physics calculator -->
+    <section id="" class="bg-white px-6 py-20 md:py-8">
+
+        <div class="mx-auto max-w-7xl ">
+
+            <!-- section heading-->
+            <div class="mx-auto max-w-2xl text-center">
+
+                <h2 class="mt-4  text-center gap-2  text-xl font-bold   sm:text-2xl lg:text-3xl">
+
+                    Physics
+                    <span class="text-blue-500"> Calculators</span>
+                </h2>
+
+                <p class="mt-3 text-sm">
+                    This business card scanner quickly scans and reads physical business card details and converts into
+                </p>
+
+            </div>
+
+            <!-- physics card -->
+
+            <div class="grid grid-cols-2 gap-3 p-4 max-w-6xl mx-auto sm:grid-cols-2 md:grid-cols-4 md:gap-4">
+
+                <!-- Card 1 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_10480886.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Ohms Law Calculator</span>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/Group 482898.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Cross Product Calculator</span>
+                </div>
+
+
+                <!-- Card 3 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_5454645.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Velocity Calculator</span>
+                </div>
+
+
+
+                <!-- Card 4 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_9803157.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Kinetic Energy Calculator</span>
+                </div>
+
+
+
+                <!-- Card 5 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_15586915.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Acceleration Calculator</span>
+                </div>
+
+
+
+                <!-- Card 6 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_18479071.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Average Velocity Calculator</span>
+                </div>
+
+
+
+                <!-- Card 7 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_11689978.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Torque Calculator</span>
+                </div>
+
+
+                <!-- card 8 -->
+                <div class="flex items-center justify-center p-6 bg-white rounded-lg border-2 border-blue-500  ">
+                    <span class="text-gray-800 text-sm font-medium text-center">See More</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Chemistry calculator -->
+    <section id="" class="bg-white px-6 py-20 md:py-8">
+
+        <div class="mx-auto max-w-7xl ">
+
+            <!-- section heading-->
+            <div class="mx-auto max-w-2xl text-center">
+
+                <h2 class="mt-4  text-center gap-2  text-xl font-bold   sm:text-2xl lg:text-3xl">
+
+                    Chemistry
+                    <span class="text-blue-500"> Calculators</span>
+                </h2>
+
+                <p class="mt-3 text-sm">
+                    This business card scanner quickly scans and reads physical business card details and converts into
+                </p>
+
+            </div>
+
+
+
+            <!-- chemistry card -->
+
+            <div class="grid grid-cols-2 gap-3 p-4 max-w-6xl mx-auto sm:grid-cols-2 md:grid-cols-4 md:gap-4">
+
+                <!-- Card 1 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/Page-1.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Ideal Gas Law Calculator</span>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_9803216.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Mole Fraction Calculator</span>
+                </div>
+
+
+                <!-- Card 3 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_3708013.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Percent Yield Calculator</span>
+                </div>
+
+
+
+                <!-- Card 4 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_13518677.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Theoretical Yield Calculator </span>
+                </div>
+
+
+
+                <!-- Card 5 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/Group3.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Charles Law Calculator</span>
+                </div>
+
+
+
+                <!-- Card 6 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_8853033.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Molar Mass Calculator</span>
+                </div>
+
+
+
+                <!-- Card 7 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_9803186.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Titration Calculator</span>
+                </div>
+
+                <!-- card 8 -->
+                <div class="flex items-center justify-center p-6 bg-white rounded-lg border-2 border-blue-500  ">
+                    <span class="text-gray-800 text-sm font-medium text-center">See More</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Statistics  Calculators -->
+    <section id="" class="bg-white px-6 py-20 md:py-8">
+
+
+        <div class="mx-auto max-w-7xl ">
+
+            <!-- section heading-->
+            <div class="mx-auto max-w-2xl text-center">
+
+                <h2 class="mt-4  text-center gap-2  text-xl font-bold   sm:text-2xl lg:text-3xl">
+
+                    Statistics 
+                    <span class="text-blue-500"> Calculators</span>
+                </h2>
+
+                <p class="mt-3 text-sm">
+                    This business card scanner quickly scans and reads physical business card details and converts into
+                </p>
+
+            </div>
+            <!-- statistics cards -->
+
+            <div class="grid grid-cols-2 gap-3 p-4 max-w-6xl mx-auto sm:grid-cols-2 md:grid-cols-4 md:gap-4">
+
+                <!-- Card 1 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_15569771.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Probability Calculator</span>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/Group4.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Hypergeometric Calculator</span>
+                </div>
+
+
+
+                <!-- Card 3 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_16257174.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Critical Value Calculator</span>
+                </div>
+
+
+
+
+
+                <!-- Card 4 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_12056961.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Covariance Calculator </span>
+                </div>
+
+
+
+
+                <!-- Card 5 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_6265854.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">TDEE Calculator</span>
+                </div>
+
+
+
+                <!-- Card 6 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_15871705.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Empirical Rule Calculator</span>
+                </div>
+
+
+
+                <!-- Card 7 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_2207179.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Quartile Calculator</span>
+                </div>
+
+
+                <!-- card 8 -->
+                <div class="flex items-center justify-center p-6 bg-white rounded-lg border-2 border-blue-500  ">
+                    <span class="text-gray-800 text-sm font-medium text-center">See More</span>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Everyday calculator -->
+    <section id="" class="bg-white px-6 py-20 md:py-8">
+
+        <div class="mx-auto max-w-7xl ">
+
+            <!-- section heading-->
+            <div class="mx-auto max-w-2xl text-center">
+
+                <h2 class="mt-4  text-center gap-2  text-xl font-bold   sm:text-2xl lg:text-3xl">
+
+                    Everyday
+                    <span class="text-blue-500"> Calculators</span>
+                </h2>
+
+                <p class="mt-3 text-sm">
+                    This business card scanner quickly scans and reads physical business card details and converts into
+                </p>
+
+            </div>
+
+
+            <!-- Everday cards -->
+
+            <div class="grid grid-cols-2 gap-3 p-4 max-w-6xl mx-auto sm:grid-cols-2 md:grid-cols-4 md:gap-4">
+
+                <!-- Card 1 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_5998867.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Probability Calculator</span>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_4913919.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Probability Calculator</span>
+                </div>
+
+
+
+                <!-- Card 3 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_1267359.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Probability Calculator</span>
+                </div>
+
+
+
+                <!-- Card 4 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_11906463.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Probability Calculator</span>
+                </div>
+
+
+                <!-- Card 5 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_14149611.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Probability Calculator</span>
+                </div>
+
+
+                <!-- Card 6 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_13219572.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Probability Calculator</span>
+                </div>
+
+
+
+                <!-- Card 7 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/Group5.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Probability Calculator</span>
+                </div>
+
+
+
+                <!-- Card 8 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_15875248.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Probability Calculator</span>
+                </div>
+
+
+
+                <!-- Card 9 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_6907443.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Probability Calculator</span>
+                </div>
+
+
+
+                <!-- Card 10 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_16133277.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Probability Calculator</span>
+                </div>
+
+
+
+                <!-- Card 11 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg border border-gray-200  ">
+                    <img src="Assest/image/fi_8323511.png" class="w-10 h-10  mb-3" />
+                    <span class="text-gray-800 text-sm font-medium text-center">Probability Calculator</span>
+                </div>
+
+
+
+                <!-- card 12 -->
+                <div class="flex items-center justify-center p-6 bg-white rounded-lg border-2 border-blue-500  ">
+                    <span class="text-gray-800 text-sm font-medium text-center">See More</span>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+
+        <!-- Footer Top -->
+        <div class="bg-blue-700 px-6 py-12">
+
+            <div class="mx-auto max-w-7xl">
+
+                <div class="grid grid-cols-2 gap-x-4 gap-y-8  sm:flex sm:flex-row sm:justify-between sm:gap-16">
+
+
+                    <div class="col-span-2 min-w-0 sm:col-span-1">
+                        <a href="#home" class="flex items-center gap-2 text-lg font-bold text-white sm:text-2xl">
+                            <img src="Assest/image/image 2.png">
+                            Calculator Online<span class="text-violet-500">.</span>
+                        </a>
+
+                        <p class="mt-4 max-w-lg text-sm leading-7 text-gray-200">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum aliquet accumsan
+                            porta
+                            lectus ridiculus in mattis. Netus sodales in volutpat ullamcorper amet adipiscing fermentum.
+                        </p>
+                    </div>
+
+
+                    <!-- Company -->
+                    <div>
+                        <h3 class="font-semibold text-white">Company</h3>
+                        <div class="mt-4 space-y-4 text-sm text-white">
+                            <a href="#about" class="block transition hover:text-blue-400">About Us</a>
+                            <a href="#features" class="block transition hover:text-blue-400">Features</a>
+                            <a href="#work" class="block transition hover:text-blue-400">Work</a>
+                            <a href="#career" class="block transition hover:text-blue-400">career</a>
+                        </div>
+                    </div>
+
+                    <!-- Help -->
+                    <div>
+                        <h3 class="font-semibold text-white">Help</h3>
+                        <div class="mt-4 space-y-4 text-sm text-white">
+                            <a href="#" class="block transition hover:text-blue-400">Customer Support</a>
+                            <a href="#" class="block transition hover:text-blue-400">Delivery Details</a>
+                            <a href="#" class="block transition hover:text-blue-400">Terms & Conditions</a>
+                            <a href="#" class="block transition hover:text-blue-400">privacy policy</a>
+                        </div>
+                    </div>
+
+
+                    <!-- Resources -->
+                    <div>
+                        <h3 class="font-semibold text-white">Resources</h3>
+                        <div class="mt-4 space-y-4 text-sm text-white">
+                            <a href="#" class="block transition hover:text-blue-400">Free eBooks</a>
+                            <a href="#" class="block transition hover:text-blue-400">Development</a>
+                            <a href="#" class="block transition hover:text-blue-400">Tutorial</a>
+                            <a href="#" class="block transition hover:text-blue-400">How to - Blog</a>
+                            <a href="#" class="block transition hover:text-blue-400">Youtube Playlist</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="mt-12 flex gap-12   pt-6 text-lg text-white sm:flex-row ">
+
+                    <img src="Assest/image/logo-twitter 2.png">
+
+
+                    <img src="Assest/image/logo-fb-simple 2.png">
+
+
+                    <img src="Assest/image/3.png">
+
+
+                    <img src="Assest/image/logo-github 1.png">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="bg-black px-6 py-4">
+
+            <div class="mx-auto max-w-7xl text-sm text-gray-200">
+
+                <p>© Copyrights 2025 by Calculator-Online.net</p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script>
+
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuOverlay = document.getElementById("menuOverlay");
+        const closeMenu = document.getElementById("closeMenu");
+
+        function openMenu() {
+            mobileMenu.classList.remove("-translate-x-full");
+            menuOverlay.classList.remove("opacity-0", "pointer-events-none");
+            menuOverlay.classList.add("opacity-100");
+            menuBtn.setAttribute("aria-expanded", "true");
+            document.body.classList.add("overflow-hidden");
+        }
+
+        function hideMenu() {
+            mobileMenu.classList.add("-translate-x-full");
+            menuOverlay.classList.add("opacity-0", "pointer-events-none");
+            menuOverlay.classList.remove("opacity-100");
+            menuBtn.setAttribute("aria-expanded", "false");
+            document.body.classList.remove("overflow-hidden");
+        }
+
+        menuBtn.addEventListener("click", openMenu);
+        closeMenu.addEventListener("click", hideMenu);
+        menuOverlay.addEventListener("click", hideMenu);
+
+        document.querySelectorAll(".menuLink").forEach(link => {
+            link.addEventListener("click", hideMenu);
+        });
+
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape") {
+                hideMenu();
+            }
+        });
+
+    </script>
+
+</body>
